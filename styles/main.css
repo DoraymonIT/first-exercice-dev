@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+section {
+  padding: 50px;
+}
+.tableUsers,
+.add-user__button-container {
+  width: 100%;
+  text-align: left;
+  padding: 50px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+}
+.tableUsers thead tr th,
+.tableUsers tbody tr td {
+  color: #3e4350;
+}
+.modal-visually-hidden {
+  visibility: hidden;
+}
+input,
+select {
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 1px solid #b3b3b3;
+}
+label {
+  color: #625a65;
+  font-size: 15px;
+}
+input:focus,
+input:active {
+  outline: none;
+  border: 1px solid #2b2b2b;
+}
+.button_default {
+  padding: 10px 35px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  color: #3e4350;
+}
+.modal__submit-button {
+  float: right;
+}
+.modal__submit-button,
+.add-user__button {
+  background: #ffaa0a;
+  margin-right: 10px;
+  margin: 20px;
+  width: 200px;
+}
+.modal__close-button {
+  border: 1px solid #ffaa0a;
+  float: right;
+}
+.modal__submit-button:hover,
+.add-user__button:hover {
+  box-shadow: none;
+  color: #ffaa0a;
+  background: #3e4350;
+}
+
+.modal__form-container {
+  display: grid;
+  height: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px;
+  width: 100%;
+}
+.modal__form-container div input,
+.modal__form-container div select {
+  width: 80%;
+}
+.badge {
+  border-radius: 7px;
+  padding: 2px 7px;
+  font-size: 12px;
+  text-align: center;
+}
+.valide {
+  background-color: #5be881;
+}
+.rejected {
+  background-color: #ff0000;
+}
+.on-validation {
+  background-color: #fdb64d;
+}

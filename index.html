@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Test de Front end | CRUD of users with Vanilla JS</title>
+  </head>
+  <body>
+    <section>
+      <table class="tableUsers">
+        <thead>
+          <tr>
+            <th class="id">ID</th>
+            <th class="creationDate">Date de création</th>
+            <th class="etat">État</th>
+            <th class="nom">Nom</th>
+            <th class="prenom">Prénom</th>
+            <th class="username">Nom d'utilisateur</th>
+            <th class="matricule">Matricule</th>
+            <th class="action">Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+      </table>
+    </section>
+    <section>
+      <div class="add-user__button-container">
+        <button id="add-user__button" class="button_default add-user__button">
+          Ajouter utilisateur
+        </button>
+      </div>
+    </section>
+    <section>
+      <div class="modal modal-visually-hidden">
+        <h3 class="modal__header">Ajout d'utilisateurs</h3>
+        <button
+          name="Close the window"
+          class="button_default modal__close-button"
+        >
+          X
+        </button>
+        <div class="modal__form-container">
+          <div class="nom">
+            <label for="lastName">Nom</label><br />
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="Nom"
+              required
+            />
+          </div>
+          <div class="prenom">
+            <label for="firstName">Prénom</label><br />
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              placeholder="Prénom"
+              required
+            />
+          </div>
+          <div class="etat">
+            <label for="status">Etat</label><br />
+            <select name="status" id="status">
+              <option value="En validation">En validation</option>
+              <option value="Validé">Validé</option>
+              <option value="Rejeté">Rejeté</option>
+            </select>
+          </div>
+          <div class="userName">
+            <label for="Nom d'utisateur">Nom d'utisateur</label><br />
+            <input
+              type="text"
+              name="userName"
+              id="userName"
+              placeholder="Nom d'utisateur"
+              required
+            />
+          </div>
+          <div class="date-creation">
+            <label for="createdDate">Date de creation</label><br />
+            <input
+              type="date"
+              name="createdDate"
+              id="createdDate"
+              placeholder="Date de creation"
+              required
+            />
+          </div>
+          <div class="matricule">
+            <label for="registrationNumber">Matricule</label><br />
+            <input
+              type="text"
+              name="registrationNumber"
+              id="registrationNumber"
+              placeholder="Matricule"
+              required
+            />
+          </div>
+          <br />
+          <button
+            type="submit"
+            name="submit"
+            id="submit"
+            class="button_default modal__submit-button"
+            onclick="addTableRow();"
+          >
+            Enregistrer
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
